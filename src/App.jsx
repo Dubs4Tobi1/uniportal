@@ -46,7 +46,7 @@ export default function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/dashboard" element={<RoleRedirect />} />
-            <Route path="/unauthorized" element={<div className="min-h-screen flex items-center justify-center"><div className="text-center"><h1 className="text-5xl font-bold text-dark-200">403</h1><p className="text-dark-500 mt-2 mb-4">Access denied</p><a href="/" className="btn-primary">Home</a></div></div>} />
+            <Route path="/unauthorized" element={<div className="min-h-screen flex items-center justify-center"><div className="text-center"><h1 className="text-5xl font-bold text-dark-200">403</h1><p className="text-dark-400 mt-2">Unauthorized Access</p></div></div>} />
 
             <Route path="/student" element={<ProtectedRoute roles={['student']}><DashboardLayout><StudentDashboard /></DashboardLayout></ProtectedRoute>} />
             <Route path="/student/register" element={<ProtectedRoute roles={['student']}><DashboardLayout><CourseRegistration /></DashboardLayout></ProtectedRoute>} />
@@ -69,7 +69,7 @@ export default function App() {
             <Route path="/admin/reports" element={<ProtectedRoute roles={['admin']}><DashboardLayout><Reports /></DashboardLayout></ProtectedRoute>} />
             <Route path="/admin/settings" element={<ProtectedRoute roles={['admin']}><DashboardLayout><SystemSettings /></DashboardLayout></ProtectedRoute>} />
 
-            <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><div className="text-center"><h1 className="text-5xl font-bold text-dark-200">404</h1><p className="text-dark-500 mt-2 mb-4">Page not found</p><a href="/" className="btn-primary">Home</a></div></div>} />
+            <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><div className="text-center"><h1 className="text-5xl font-bold text-dark-200">404</h1><p className="text-dark-400 mt-2">Page Not Found</p></div></div>} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
