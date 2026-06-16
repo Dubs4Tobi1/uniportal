@@ -84,7 +84,7 @@ export default function LoginPage() {
           </p>
 
           <div className="mt-8 pt-6 border-t border-dark-100 dark:border-dark-700">
-            <p className="text-sm font-semibold text-dark-700 dark:text-dark-300 text-center mb-4">🎯 Quick Demo Access</p>
+            <p className="text-sm font-semibold text-dark-700 dark:text-dark-300 text-center mb-4"> Quick Demo Access</p>
             <div className="grid grid-cols-2 gap-3">
               {demoLogins.map(d => (
                 <button key={d.label} onClick={() => handleDemo(d)}
@@ -98,9 +98,9 @@ export default function LoginPage() {
             </div>
             <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-800">
               <p className="text-xs text-blue-900 dark:text-blue-300 leading-relaxed">
-                <span className="font-bold block mb-1">👨‍💼 Admin Button:</span> Click the purple "Admin Demo" button<br/>
-                <span className="font-bold block mb-1">👨‍🏫 Lecturer Button:</span> Click the blue "Lecturer Demo" button<br/>
-                <span className="font-bold">👨‍🎓 Student:</span> Register a new account below
+                <span className="font-bold block mb-1"> Admin Button:</span> Click the purple "Admin Demo" button<br/>
+                <span className="font-bold block mb-1"> Lecturer Button:</span> Click the blue "Lecturer Demo" button<br/>
+                <span className="font-bold"> Student:</span> Register a new account below
               </p>
             </div>
           </div>
