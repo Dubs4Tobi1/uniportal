@@ -50,7 +50,7 @@ export default function LoginPage() {
               <Layers size={22} className="text-white" />
             </div>
             <h1 className="text-2xl font-bold text-dark-900 dark:text-dark-50 font-display">Sign in</h1>
-            <p className="text-sm text-dark-500 dark:text-dark-400 mt-1">Access your LCU Portal account</p>
+            <p className="text-sm text-dark-500 dark:text-dark-400 mt-1">Access your LCU Portal account (25/26)</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -83,23 +83,24 @@ export default function LoginPage() {
             <Link to="/register" className="text-primary-600 font-medium hover:underline">Create one</Link>
           </p>
 
-          {/* Demo credentials */}
-          <div className="mt-6 pt-5 border-t border-dark-100 dark:border-dark-700">
-            <p className="text-xs text-dark-400 text-center mb-3">Quick demo access</p>
-            <div className="grid grid-cols-2 gap-2">
+          <div className="mt-8 pt-6 border-t border-dark-100 dark:border-dark-700">
+            <p className="text-sm font-semibold text-dark-700 dark:text-dark-300 text-center mb-4">🎯 Quick Demo Access</p>
+            <div className="grid grid-cols-2 gap-3">
               {demoLogins.map(d => (
                 <button key={d.label} onClick={() => handleDemo(d)}
-                  className="text-xs px-3 py-2 rounded-lg border border-dark-200 dark:border-dark-700 text-dark-600 dark:text-dark-400 hover:bg-dark-50 dark:hover:bg-dark-700 transition-colors text-left">
-                  <span className="font-medium">{d.label}</span><br />
-                  <span className="text-dark-400 text-xs">{d.email}</span>
+                  className="px-4 py-3 rounded-lg border-2 border-dark-300 dark:border-dark-600 text-dark-700 dark:text-dark-300 hover:bg-dark-100 dark:hover:bg-dark-800 transition-all font-semibold shadow-md hover:shadow-lg hover:border-primary-500 dark:hover:border-primary-400"
+                  style={{borderColor: d.color === 'purple' ? '#9333ea' : '#3b82f6'}}
+                >
+                  <span className="font-bold text-lg">{d.label}</span><br />
+                  <span className="text-xs opacity-75">{d.email}</span>
                 </button>
               ))}
             </div>
-            <div className="mt-2 p-2.5 bg-dark-50 dark:bg-dark-700 rounded-lg">
-              <p className="text-xs text-dark-500 dark:text-dark-400">
-                <span className="font-medium">Student:</span> Register a new account below
-                <br /><span className="font-medium">Admin pw:</span> admin123 &nbsp;
-                <span className="font-medium">Lecturer pw:</span> lecturer123
+            <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-800">
+              <p className="text-xs text-blue-900 dark:text-blue-300 leading-relaxed">
+                <span className="font-bold block mb-1">👨‍💼 Admin Button:</span> Click the purple "Admin Demo" button<br/>
+                <span className="font-bold block mb-1">👨‍🏫 Lecturer Button:</span> Click the blue "Lecturer Demo" button<br/>
+                <span className="font-bold">👨‍🎓 Student:</span> Register a new account below
               </p>
             </div>
           </div>
