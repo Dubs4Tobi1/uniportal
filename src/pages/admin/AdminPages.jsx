@@ -24,7 +24,7 @@ export function AdminDashboard() {
     <div>
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-dark-900 dark:text-dark-50 font-display">Admin Dashboard</h1>
-        <p className="text-sm text-dark-500 mt-1">System overview — 2024/2025 Academic Session</p>
+        <p className="text-sm text-dark-500 mt-1">System overview — 2025/2026 Academic Session</p>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <StatCard icon={BookOpen} label="Total Courses" value={stats.courses} color="green" />
